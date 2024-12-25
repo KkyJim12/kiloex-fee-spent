@@ -1,10 +1,10 @@
 <template>
-  <div
-    class="h-screen w-screen bg-gradient-to-r from-blue-500 to-gray-200 p-20"
+  <main
+    class="p-10 lg:p-20 w-dvw h-content lg:h-dvh bg-gradient-to-r from-blue-500 to-gray-200"
   >
-    <div class="grid grid-cols-12 gap-20 h-full">
-      <div class="col-span-12 lg:col-span-4 h-full">
-        <div class="bg-white bg-opacity-30 w-full h-full rounded-xl p-8">
+    <div class="grid h-full grid-cols-12 gap-y-10 lg:gap-y-0 lg:gap-x-10">
+      <div class="h-full col-span-12 lg:col-span-4">
+        <div class="w-full h-full p-8 bg-white bg-opacity-30 rounded-xl">
           <div class="flex flex-col space-y-5">
             <img
               class="w-full h-32"
@@ -13,7 +13,7 @@
             />
             <input
               v-model="tradingPoints"
-              class="w-full rounded shadow-md px-4 py-2 focus:outline-none"
+              class="w-full px-4 py-2 rounded shadow-md focus:outline-none"
               placeholder="Trading Points"
               type="number"
             />
@@ -47,13 +47,15 @@
           </div>
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-8 h-full">
-        <div class="bg-white bg-opacity-30 w-full h-full rounded-xl p-8">
+      <div class="h-full col-span-12 lg:col-span-8">
+        <div class="w-full h-full p-8 bg-white bg-opacity-30 rounded-xl">
           <div class="flex flex-col space-y-10">
             <h1 class="text-5xl font-bold">Formula:</h1>
             <hr class="my-10" />
-            <div>
-              <p>Volume = ( Trading Points ÷ 24.5 ) x 1,000</p>
+            <div class="flex flex-col space-y-3">
+              <p>
+                Volume = ( Trading Points ÷ 24.5 ) x 1,000
+              </p>
               <p>
                 Fee Spent = (( Trading Points ÷ 24.5 ) x 1,000) x ( 0.1 ÷ 100 )
               </p>
@@ -63,10 +65,10 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-col space-y-10 mt-20">
+          <div class="flex flex-col mt-20 space-y-10">
             <h1 class="text-5xl font-bold">Note:</h1>
             <hr class="my-10" />
-            <div>
+            <div class="flex flex-col space-y-3">
               <p>
                 1. This is just an estimate that doesn't include the VIP fee
                 discount.
@@ -85,7 +87,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
